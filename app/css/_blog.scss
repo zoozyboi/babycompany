@@ -1,0 +1,243 @@
+.blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+    & h3 {
+        font-family: "Baloo Bhai 2", curs;
+        font-size: 25px;
+        font-weight: 700;
+        color: #31345C;
+        text-transform: capitalize;
+    }
+    &-f1container {
+        position: relative;
+        width: 1140px;
+        height: 422px;
+        background: #C3E2FF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        overflow: hidden;
+
+        .text {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 2;
+          margin-right: 543px;
+          padding: 87px 59px 89px 48px;
+        }
+        #date {
+
+            font-family: $ff-quicksand;
+            font-size: 13px;
+            font-weight: 400;
+            color: #7A80B6;
+            text-transform: capitalize;
+        }
+        .text h2 {
+            font-family: $ff-baloo;
+            font-size: 27px;
+            font-weight: 700;
+            color: #31355C;
+            text-transform: capitalize;
+        }
+        #button {
+            position: relative;
+            width: 161px;
+            height: 56px;
+            background: #E11880;
+            border: none;
+            border-radius: 5px;
+            color: rgb(245, 243, 239);
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            padding: 0 20px;
+            overflow: hidden;
+             h5 {
+                font-family: $ff-quicksand;
+                font-weight: 600;
+                text-align: left;
+            }
+           & #arrow {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 58px;
+                height: 56px;
+                background-color: #BB156B;
+                position: absolute;
+                right: 0;
+                color:#fff;
+                
+            }
+        }
+        
+        .baby-slider {
+            width: 543px;
+            height: 422px;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
+        .baby-slides {
+            width: 500%;
+            height: 422px;
+            display: flex; 
+
+        }
+        .baby-slides input {
+            display: none;
+        }
+        .slide {
+            width: 20%;
+            transition: 200ms ease-in-out;
+        }
+        .slide img {
+            width: 543px;
+            height: 422px;
+        }
+        //manual
+        .navigation-manual {
+            position: absolute;
+            width: 543px;
+            margin-top: -40px;
+            display: flex;
+            justify-content: center;
+        }
+        .manual-btn {
+            border: 2px solid a0a1a1;
+            padding: 7px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 100ms ease-in-out;
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+            &:hover,
+            &:focus,
+            &:active {
+                background: #e5eaeb;
+            }
+        }
+        #rd1:checked ~ .first {
+            margin-left: 0;
+            transition: all 200ms ease-in-out;
+        }
+        #rd2:checked ~ .first {
+            margin-left: -20%;
+            transition: all 200ms ease-in-out;
+        }
+        #rd3:checked ~ .first {
+            margin-left: -40%;
+            transition: all 200ms ease-in-out;
+        }
+        //automatic navigation
+        .navigation-auto {
+            position:absolute;
+            display: flex;
+            width: 543px;
+            justify-content: center;
+            margin-top: 383px;
+        }
+        .navigation-auto div {
+            border: 2px solid #a0a1a1;
+            padding: 5px;
+            border-radius: 10px;
+            transition: 100ms ease-in-out;
+
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+        #rd1:checked ~ .navigation-auto .auto-btn1 {
+            background: #e5eaeb;
+        }
+        #rd2:checked ~ .navigation-auto .auto-btn2 {
+            background: #e5eaeb;
+        }
+        #rd3:checked ~ .navigation-auto .auto-btn3 {
+            background: #e5eaeb;
+        }
+    }
+    &-f2container {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .item {
+            display: block;
+            width: 358px;
+            height: 383px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            &:first-child {
+                background: #FFF5DC;
+            }
+            &:nth-child(2) {
+                background: #FCDCDD;
+            }
+            &:last-child {
+                background: #CFF69D;
+            }
+            &:not(:last-child) {
+                margin-right: 36px;
+            }
+        }
+        .sleepingbaby {
+            position: absolute;
+            top: 0;
+            width: 358px;
+            height: 274px;
+            background: url('../images/blogsleepingbaby.jpg');
+        }
+        .description {
+            position: absolute;
+            left: 36px;
+            bottom: 23px;
+            
+            
+            #date {
+                font-family: $ff-quicksand;
+                font-size: 13px;
+                font-weight: 400;
+                color: #000000;
+                text-transform: capitalize;
+            }
+            & h5 {
+                font-family: $ff-quicksand;
+                font-size: 18px;
+                font-weight: 700;
+                color: #000000;
+                text-transform: capitalize;
+                margin-bottom: 0;
+            }
+
+          
+        }
+       .item span {
+            display: block;
+            width: 100%;
+            height: 370px;
+          
+        }
+        .item #l1 { 
+            border-bottom: 2px dashed #dbb960;
+        }
+        .item #l2 { 
+            border-bottom: 2px dashed #EE7175;
+        }
+        .item #l3 { 
+            border-bottom: 2px dashed #A3F140;
+        }
+    }
+}

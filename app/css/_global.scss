@@ -1,0 +1,44 @@
+$ff-baloo : 'Baloo Bhai 2', curs;
+$ff-quicksand: 'Quicksand', sans-serif;
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+*, 
+*::before, 
+*::after {
+    box-sizing: inherit;
+} 
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: $ff-quicksand;
+    // background-color: #999;  
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+//hover 
+
+.expand-hover {
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+  .expand-hover:hover,
+  .expand-hover:focus,
+  .expand-hover:active {
+
+    transform: scale(1.2);
+  }
+  
