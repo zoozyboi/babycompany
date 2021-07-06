@@ -20,7 +20,7 @@ searchbutton.onclick = function() {
             buy.style.display = "block";
         }
     }
-    const x = window.matchMedia("(max-width: 820px)")
+    const x = window.matchMedia("(max-width: 760px)")
     query(x)
     
     

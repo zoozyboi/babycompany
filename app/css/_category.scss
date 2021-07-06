@@ -7,7 +7,7 @@
    background-position:center;
     background-size: contain;
     width: 100%;
-    height: 134vh;
+    height: 100%;
    overflow: hidden;
    & h2 {
      font-family: $ff-baloo;
@@ -190,7 +190,49 @@
           right: 0;
           color:#fff;
           
-      }
+        }
+     }
   }
+}
+// mobile 
+@media (max-width:1154px) {
+  .category {
+    height: 100%;
+    & h2 {
+
+    }
+    &-f1container {
+      flex-direction: column;
+    }
+    &-f1container {
+      .item {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .next-attribute {
+      display: none;
+    }
+    &-f2container {
+      width: 320px;
+    }
+    &-f2container {
+      .image {
+        .baby-towel {
+          right: -320px;
+          width: 200%;;
+        }
+        .star {
+          right: 95px;
+        }
+        .moon {
+          left: -180px;
+        }
+      }
+      .text {
+        top: 0;
+      }
+    }
   }
 }

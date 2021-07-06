@@ -1,166 +1,127 @@
 .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 768px;
+    display: grid;
+    justify-content: end;
+    align-content: flex-end;
     position: relative;
-
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    // background: #32c3c0;
     #dash {
-        display: block;
-        width: 80%;
-        height: 10px;
-        border-bottom: 2px dashed #F6E301;
-        position: absolute;
-        top: 0;
-    }
-    &-maincontainer {
-        position: absolute;
-        top: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: inline-block;
         width: 100%;
-        height: 460px;
-        margin-bottom: 30px;
-    
-    
-        
+        height: 10px;
+        border-top: 2px dashed #F3E101;
     }
-    &-f1container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        width: 833px;
-        height: 460px;
-        position: relative;
-        padding: 0 127px;
-
-        & h4 {
-            position: absolute;
-            top: 0;
+    &-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-gap: 20px;
+        .sec h2 {
+            position: relative;
             font-family: $ff-baloo;
-            font-size: 16px;
             font-weight: 700;
+            margin-bottom: 15px;
             text-transform: capitalize;
+            
         }
-        & #t1 {
+        .sec h2::before {
+            content: '';
             position: absolute;
-            top: 10%;
-            font-family: $ff-baloo;
-            font-size: 16px;
-            font-weight: 400;
-            text-transform: capitalize;
-            margin-right: 30px;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: white;
+        }
+        .sec #t1 {
+            font-size: 14px;
+        }
+        .sec ul {
+            padding-left: 0;
         }
         .email {
-            display: flex;
-            align-items: center;
+            // width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-content: center;
             justify-content: center;
-            position: absolute;
-            top: 30%;
         }
-        & a{
-            font-family: $ff-quicksand;
-            font-size: 14px;
+        .email p {
+            margin: 0;
+        }
+        .email a {
+            font-family: $ff-baloo;
             font-weight: 700;
         }
         .social {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 50px );
         }
-        .tag {
-            display: block;
-            width: 30px;
-            height: 30px;
+        
+        .social li {
+            list-style: none;
+        }
+        .social li a {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
-           
-            display: flex;
-            align-items: center;
+            background: yellow;
+            display: grid;
+            align-content: center;
             justify-content: center;
+            text-decoration: none;
             margin-right: 10px;
-            &:first-child {
-                background: #C3E2FF;
-            }
-            &:nth-child(2) {
-                background:#FEF1E1;
-            }
-            &:nth-child(3) {
-                background:#FCDBDE;
-            }
-            &:last-child {
-                background: #CFF79D;
-            }
+        }
+        .social li .tag1 {
+            background:#C3E2FF;
+        }
+        .social li .tag2 {
+            background:#FEF1E2;
+        }
+        .social li .tag3 {
+            background:#FCDCDD;
+        }
+        .social li .tag4 {
+            background:#D0F79D;
+        }
+        .navigation {
+            position: relative;
+        }
+        .navigation li {
+            list-style: none;
+        }
+        .navigation li a {
+            text-decoration: none;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        .navigation li a:hover {
+            color: rgb(80, 62, 62);
         }
     }
-    &-f2container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        width: 220px;
-        height: 460px;
-        position: relative;
-        .links {
-            display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        }
-        & h4 {
-            position: absolute;
-            top: 0;
-            font-family: $ff-baloo;
-            font-size: 16px;
-            font-weight: 700;
-            text-transform: capitalize;
-        }
-        .links {
-            position: absolute;
-            top: 10%;
-            font-family: $ff-baloo;
-            font-size: 16px;
-            font-weight: 400;
-            text-transform: capitalize;
-        }
-    }
-    &-f3container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        width: 220px;
-        height: 460px;
-        .links {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        }
-        & h4 {
-            position: absolute;
-            top: 0;
-            font-family: $ff-baloo;
-            font-size: 16px;
-            font-weight: 700;
-            text-transform: capitalize;
-        }
-        .links {
-            position: absolute;
-            top: 10%;
-            font-family: $ff-baloo;
-            font-size: 16px;
-            font-weight: 400;
-            text-transform: capitalize;
-        }
-    }
-    .copyright {
-        position: absolute;
-        bottom: 40%;
-    }
+}
+@media(max-width:991px) {
+    .footer {
+        padding: 40px;
+        &-container {
+            grid-template-columns: repeat(2,1fr);
 
+            .email{
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+    }
+}
+@media(max-width:768px) {
+    .footer {
+        padding: 40px;
+        &-container {
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
 }

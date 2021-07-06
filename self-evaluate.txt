@@ -2,12 +2,7 @@ HTML: 8/10
 CSS:  8/10
 Bootstrap: 5/10
 JavaScript: 7/10
-Jquery:	3/10
+Jquery:	5/10
 PHP: 5/10
 SQL: 5/10
 Wordpress: 5/10
-
-
-
-Good day: I failed to submit on time because of sudden blackout, 
-but I had fun developing the page thank you for the experience.
